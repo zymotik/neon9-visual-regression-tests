@@ -1,0 +1,7 @@
+name: "Neon9 - Visual regression tests"
+steps:
+  - label: ":mag: Get domain list"
+    key: "get-domain-list"
+    command: make get-domain-list --warn-undefined-variables
+    artifact_paths:
+      - "./out/domains.json"
