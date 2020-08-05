@@ -10,7 +10,7 @@ steps:
   - label: ":cypress: Check websites are running"
     depends_on: "get-domain-list"
     command: 
-      - buildkite-agent artifact download out/domains.json .
+      - buildkite-agent artifact download out\domains.json .
       - make test
     artifact_paths:
       - "./cypress/videos/*"
