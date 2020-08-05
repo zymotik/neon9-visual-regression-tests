@@ -9,3 +9,7 @@ ifeq (,$(wildcard ./out))
 	mkdir out
 endif
 	curl -X GET "https://${PLESK-URL}/api/v2/domains" -H "accept: application/json" -H "X-API-Key: ${PLESK-API-KEY}" > ./out/domains.json
+
+
+test:
+	@docker-compose run --rm cypress

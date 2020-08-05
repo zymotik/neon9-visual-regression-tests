@@ -1,7 +1,18 @@
 name: "Neon9 - Visual regression tests"
+
 steps:
   - label: ":mag: Get domain list"
     key: "get-domain-list"
     command: make get-domain-list --warn-undefined-variables
     artifact_paths:
       - "./out/domains.json"
+
+  - label: ":cypress: Check websites are running"
+    depends_on: "get-domain-list"
+    command: 
+      - buildkite-agent artifact download out/domains.json .
+      - make test
+    artifact_paths:
+      - "./cypress/videos/*"
+      - "./cypress/screenshots/*"
+      - "./cypress/reports/*"
