@@ -2,7 +2,8 @@ version: "3"
 
 services:
   cypress:
-    image: cypress/included:4.12.1
-    working_dir: /app
+    build: .
     volumes:
-     - .:/app
+      - ./cypress/reports:/app/cypress/reports
+      - ./cypress/screenshots:/app/cypress/screenshots
+      - ./cypress/videos:/app/cypress/videos
