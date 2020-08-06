@@ -1,7 +1,7 @@
 {
   "name": "neon9-visual-regression-tests",
   "version": "1.0.0",
-  "description": "",
+  "description": "Confirm domains are loading as expected",
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
