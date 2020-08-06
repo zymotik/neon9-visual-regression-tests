@@ -13,7 +13,6 @@ steps:
       - buildkite-agent artifact download out\domains.json .
       - make test
     artifact_paths:
-      - "./cypress/videos/*"
       - "./cypress/screenshots/*"
       - "./cypress/reports/*"
       - "./cypress/snapshots/**/*.diff.png"

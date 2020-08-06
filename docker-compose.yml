@@ -6,6 +6,5 @@ services:
     volumes:
       - ./cypress/reports:/app/cypress/reports
       - ./cypress/screenshots:/app/cypress/screenshots
-      - ./cypress/videos:/app/cypress/videos
       - ./cypress/snapshots:/app/cypress/snapshots
       
