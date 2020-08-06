@@ -12,4 +12,5 @@ endif
 
 
 test:
+	@docker-compose build cypress
 	@docker-compose run --rm cypress
