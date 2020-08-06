@@ -1,5 +1,7 @@
-describe('Home page', () => {
-    it('Loads', () => {
-        expect(true).to.equal(true);
+describe('Check domains', () => {
+    it('Home page', () => {
+        cy.visit('https://google.com');
+        cy.contains('body');
+        cy.matchImageSnapshot();
     });
 });
