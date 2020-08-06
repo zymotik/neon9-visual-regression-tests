@@ -16,3 +16,4 @@ steps:
       - "./cypress/videos/*"
       - "./cypress/screenshots/*"
       - "./cypress/reports/*"
+      - "./cypress/snapshots/**/*.diff.png"

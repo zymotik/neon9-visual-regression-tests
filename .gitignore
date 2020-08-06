@@ -105,5 +105,8 @@ dist
 
 # Cypress
 cypress/videos
+cypress/reports
+cypress/screenshots
+cypress/snapshots/**/*.diff.png
 *.js
 out
