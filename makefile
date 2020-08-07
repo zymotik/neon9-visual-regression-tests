@@ -1,5 +1,7 @@
 #!/bin/bash
 SHELL := /bin/bash
+MSG_BUILD := +++ :cypress: :docker: Building image with custom dependencies
+MSG_TEST := +++ :cypress: :mag: Executing Cypress tests
 
 # use to test environment variables locally:
 # include .env
@@ -12,5 +14,7 @@ endif
 
 
 test:
+	@echo $(MSG_BUILD)
 	@docker-compose build cypress
-	@docker-compose run --rm cypress
+	@echo $(MSG_TEST)
+	@docker-compose run --rm -T cypress
