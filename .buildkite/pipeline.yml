@@ -16,3 +16,7 @@ steps:
       - "./cypress/screenshots/*"
       - "./cypress/reports/*"
       - "./cypress/snapshots/**/*.diff.png"
+
+notify:
+  - email: "info@neon9.co.uk"
+    if: build.state == "failed"
