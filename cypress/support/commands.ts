@@ -5,6 +5,7 @@ addMatchImageSnapshotCommand({
   failureThresholdType: 'percent',
   customDiffConfig: { threshold: 0.1 }, // per pixel difference
   capture: 'viewport',
+  customSnapshotsDir: "./snapshots",
 });
 
 Cypress.Commands.add("setResolution", (size) => {

@@ -7,5 +7,5 @@ services:
       - ./out:/app/out
       - ./cypress/reports:/app/cypress/reports
       - ./cypress/screenshots:/app/cypress/screenshots
-      - ./cypress/snapshots:/app/cypress/snapshots
+      - ./snapshots:/app/snapshots
       
